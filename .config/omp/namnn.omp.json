@@ -65,8 +65,7 @@
           "type": "aws",
           "style": "plain",
           "foreground": "p:sky",
-          "background": "transparent",
-          "template": "\ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+          "background": "transparent"
         }
       ],
       "type": "prompt"
