@@ -1,0 +1,22 @@
+## Force LF line endings for all text files in this repo.
+* text=auto eol=lf
+
+## Treat common binaries as binary (no EOL normalization).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.7z binary
+*.gz binary
+*.tgz binary
+*.bz2 binary
+*.xz binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
