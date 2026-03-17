@@ -1,0 +1,84 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+          "os": "#ACB0BE",
+          "closer": "p:os",
+          "pink": "#F5C2E7",
+          "lavender": "#B4BEFE",
+          "blue":  "#89B4FA",
+          "green": "#a6e3a1",
+          "red": "#f38ba8",
+          "yellow": "#f9e2af"
+    },
+    "blocks": [
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "p:os",
+            "style": "plain",
+            "template": "{{.Icon}} ",
+            "type": "os"
+          },
+          {
+            "foreground": "p:yellow",
+            "style": "plain",
+            "template": "{{ .UserName }}@{{ .HostName }} ",
+            "type": "session"
+          },
+          {
+            "foreground": "p:pink",
+            "properties": {
+              "style": "folder"
+            },
+            "style": "plain",
+            "template": "{{ if eq .Path \"~\" }}\uf015 {{ else }}\uf07c {{ .Path }} {{ end }}",
+            "type": "path"
+          },
+          {
+            "foreground": "p:lavender",
+            "properties": {
+              "branch_icon": "\ue725 ",
+              "cherry_pick_icon": "\ue29b ",
+              "commit_icon": "\uf417 ",
+              "fetch_status": true,
+              "fetch_upstream_icon": true,
+              "merge_icon": "\ue727 ",
+              "no_commits_icon": "\uf0c3 ",
+              "rebase_icon": "\ue728 ",
+              "revert_icon": "\uf0e2 ",
+              "tag_icon": "\uf412 "
+            },
+            "template": "{{ .HEAD }} ",
+            "style": "plain",
+            "type": "git"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "type": "text",
+            "style": "plain",
+            "foreground": "p:green",
+            "foreground_templates": [
+              "{{ if gt .Code 0 }}p:red{{ end }}"
+            ],
+            "template": "{{ if gt .Code 0 }}\uf00d{{ else }}\uf105{{ end }}"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground": "p:closer",
+        "template": "\uf105 "
+    },
+    "final_space": true,
+    "version": 4
+  }
