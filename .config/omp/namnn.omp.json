@@ -9,7 +9,8 @@
     "green": "#a6e3a1",
     "red": "#f38ba8",
     "yellow": "#f9e2af",
-    "sky": "#89dceb"
+    "sky": "#89dceb",
+    "peach": "#ef9f76"
   },
   "blocks": [
     {
@@ -65,6 +66,14 @@
           "type": "aws",
           "style": "plain",
           "foreground": "p:sky",
+          "background": "transparent"
+        },
+        {
+          "type": "claude",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "foreground": "p:peach",
           "background": "transparent"
         }
       ],
